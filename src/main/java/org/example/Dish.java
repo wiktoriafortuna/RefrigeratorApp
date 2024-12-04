@@ -25,4 +25,12 @@ public class Dish {
     public void setIngredients(List<Ingredient> ingredients) {
         this.ingredientList = ingredients;
     }
+
+    @Override
+    public String toString() {
+        return "Dish{" +
+                "name='" + name + '\'' +
+                ", ingredientList=" + ingredientList +
+                '}';
+    }
 }

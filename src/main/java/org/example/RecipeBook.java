@@ -28,4 +28,12 @@ public class RecipeBook {
 //    public String Suggestdishes(){
 //
 //
+
+    @Override
+    public String toString() {
+        return "RecipeBook{" +
+                "ingredientList=" + ingredientList +
+                ", dishList=" + dishList +
+                '}';
+    }
 }

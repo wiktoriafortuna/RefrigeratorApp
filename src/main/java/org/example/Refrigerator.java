@@ -17,4 +17,11 @@ public class Refrigerator {
     }
 //     remove ingredient , add ingredient, check if is ingredient, = metody
 
+
+    @Override
+    public String toString() {
+        return "Refrigerator{" +
+                "ingredientList=" + ingredientList +
+                '}';
+    }
 }
