@@ -11,6 +11,9 @@ public class Main {
         List<Ingredient> ingredients = new ArrayList<>();
         ingredients.add(new Ingredient("milk", 500));
         ingredients.add(new Ingredient("egg", 12));
+
+        List<Dish>dishList= new ArrayList<>();
+        dishList.add(new Dish("pancakes",ingredients));
         Refrigerator refrigerator = new Refrigerator(ingredients);
 
         List<Ingredient> ingredientList = refrigerator.getIngredientList();

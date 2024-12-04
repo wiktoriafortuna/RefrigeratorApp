@@ -1,19 +1,10 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.Dictionary;
 import java.util.List;
 
-public class RecipeBook {
+public class Recipe {
     public List<Ingredient> ingredientList;
     public List<String> dishNames;
-    public List<Recipe>recipes;
-    public RecipeBook(List<Ingredient> ingredientList,List<String> dishNames) {
-        this.ingredientList = ingredientList;
-        this.dishNames = dishNames;
-        this.recipes = new ArrayList<>();
-        recipes.add (new Recipe(ingredientList,dishNames));
-    }
 
     public List<Ingredient> getIngredientList() {
         return ingredientList;
@@ -27,20 +18,21 @@ public class RecipeBook {
         return dishNames;
     }
 
-    public void setDishList(List<String> dishNames) {
+    public void setDishNames(List<String> dishNames) {
         this.dishNames = dishNames;
     }
-//    public String Suggestdishes(){
-//
-//
 
+    public Recipe(List<Ingredient> ingredientList, List<String> dishNames) {
+        this.ingredientList = ingredientList;
+        this.dishNames = dishNames;
+
+    }
 
     @Override
     public String toString() {
-        return "RecipeBook{" +
+        return "Recipe{" +
                 "ingredientList=" + ingredientList +
                 ", dishNames=" + dishNames +
-                ", recipes=" + recipes +
                 '}';
     }
 }
