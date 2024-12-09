@@ -3,6 +3,8 @@ package org.example;
 public class Ingredient {
     String name;
     int quantity;
+
+    // constructor
     public Ingredient(String name, int quantity) {
         this.name = name;
         this.quantity = quantity;
