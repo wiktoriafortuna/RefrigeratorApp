@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // klasa Refrigerator
@@ -29,28 +30,15 @@ public class Refrigerator {
     public void isIngredientAvailable(String ingredientName) {
         System.out.println();
         System.out.println("Stared function checking if " + ingredientName + " is available");
-//        String firstIngredientName = ingredientList.get(0).getName(); // milk
-//        String secondIngredientName = ingredientList.get(1).getName(); // egg
-//        String thirdIngredientName = ingredientList.get(2).getName(); // oil
-
-        for(Ingredient ingredient : ingredientList) {
-            System.out.println("checking: " + ingredient);
-            if (ingredient.getName().equals(ingredientName)) {
-                System.out.println("Yes! " + ingredientName + " is available");
-            } else {
-                System.out.println("No! " + ingredientName + " is NOT available");
-            }
+        List<String> ingredientNames = new ArrayList<>();
+        for (Ingredient ingredient : ingredientList) {
+            ingredientNames.add(ingredient.getName());
         }
-//
-//        if (firstIngredientName.equals(ingredientName)) {
-//            System.out.println("Yes! " + firstIngredientName + " is available");
-//        } else if (secondIngredientName.equals(ingredientName)) {
-//            System.out.println("Yes! " + secondIngredientName + " is available");
-//        } else if (thirdIngredientName.equals(ingredientName)) {
-//            System.out.println("Yes! " + thirdIngredientName + " is available");
-//        } else {
-//            System.out.println("No! " + ingredientName + " is NOT available");
-//        }
+        if (ingredientNames.contains(ingredientName)) {
+            System.out.println("Yes! " + ingredientName + " is available");
+        } else {
+            System.out.println("No! " + ingredientName + " is available");
+        }
         System.out.println("Ended function checking if " + ingredientName + " is available");
         System.out.println();
     }
